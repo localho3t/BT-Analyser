@@ -1,7 +1,9 @@
 from termcolor import colored
+import os
 
 
 def banner():
+    os.system('clear')
     print(
         colored(
             f"""
