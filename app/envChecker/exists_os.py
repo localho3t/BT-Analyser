@@ -51,5 +51,10 @@ def exists_os():
               colored('[ok]', 'green'))
     #
     if flag == 0:
+        print(colored("[*] start application...", 'white'),
+              colored("[No]", 'red'))
         print(colored("[!] Error File Path ... ", 'red'))
         exit(0)
+    else:
+        print(colored("[*] start application...", 'white'),
+              colored("[Yes]", 'green'))
