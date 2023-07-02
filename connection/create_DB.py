@@ -16,7 +16,6 @@ def DBNameCheck():
 
 
 def CreateDB(data):
-    sleep(3)
     print(colored('create database ...',
                   'yellow'), colored('[wait]', 'yellow'))
     mycursor = data.cursor()

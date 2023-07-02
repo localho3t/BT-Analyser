@@ -1,4 +1,5 @@
 from termcolor import colored
+from app.fileReader.logReader import LogReader
 
 
 class App:
@@ -8,3 +9,7 @@ class App:
     def start_msg(self):
         print(colored("[*] start application...", 'white'),
               colored("[Yes]", 'green'))
+        self.start()
+
+    def start(self):
+        LogReader()
