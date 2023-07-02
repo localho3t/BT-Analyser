@@ -10,11 +10,12 @@ class CheckResponseApp:
         return res
 
     def check_reponses(self):
-        for i in self.data:
-            c = int(i)
-            # print(self.list[c])
-            # break
-            self.list[c] += 1
+        try:
+            for i in self.data:
+                c = int(i)
+                self.list[c] += 1
+        except:
+            pass
 
         for key in list(self.list.keys()):
             if self.list[key] == 0:

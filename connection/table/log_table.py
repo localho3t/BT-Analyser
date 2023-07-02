@@ -21,15 +21,16 @@ def log_create():
         )
         mycursor = mydb.cursor()
         mycursor.execute(
-            "CREATE TABLE `log` (`id` int(11) NOT NULL,\
-                `response` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK(json_valid(`response`)),\
-                `headers` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK(json_valid(`headers`)),\
-                `request_count` int(11) NOT NULL,\
-                `created_at` timestamp NOT NULL ,\
-                `update_at` datetime NOT NULL,\
-                `avrg_volume` double NOT NULL\
-                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci\
+            "CREATE TABLE `log` (`id` int(11) PRIMARY KEY  NOT NULL AUTO_INCREMENT,\
+            `response` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK(json_valid(`response`)),\
+            `headers` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK(json_valid(`headers`)),\
+            `request_count` int(11) NOT NULL,\
+            `created_at` date DEFAULT NULL,\
+            `update_at` datetime NOT NULL,\
+            `avrg_volume` double NOT NULL\
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci\
             ")
+
         print(colored('[*] log table in bt_Analyser was created!',
                       'green'))
     except:
