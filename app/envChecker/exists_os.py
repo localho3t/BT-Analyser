@@ -4,52 +4,45 @@ import os
 load_dotenv()
 
 
+def print_functions(msg, msg2, color):
+    print(colored(f"{msg} is check ...", 'yellow'),
+          colored(f"[{msg2}]", f"{color}"))
+
+
 def exists_os():
     flag = 1
+    # ====================================================
     if os.getenv('File_PATH') == "":
-        print(colored("File_PATH is check ...", 'yellow'),
-              colored('[No]', 'red'))
+        print_functions('File_PATH', 'No', 'red')
         flag = 0
     else:
-        print(colored("DB_Name is check ...", 'yellow'),
-              colored('[ok]', 'green'))
-
+        print_functions('File_PATH', 'ok', 'green')
     #
     if os.getenv('DB_Name') == "":
-        print(colored("DB_Name is check ...", 'yellow'),
-              colored('[No]', 'red'))
+        print_functions('DB_Name', 'No', 'red')
     else:
-        print(colored("DB_Name is check ...", 'yellow'),
-              colored('[ok]', 'green'))
+        print_functions('DB_Name', 'ok', 'green')
     #
     if os.getenv('DB_User') == "":
-        print(colored("DB_User is check ...", 'yellow'),
-              colored('[No]', 'red'))
+        print_functions('DB_User', 'No', 'red')
     else:
-        print(colored("DB_User is check ...", 'yellow'),
-              colored('[ok]', 'green'))
+        print_functions('DB_User', 'ok', 'green')
     #
     if os.getenv('DB_Pass') == "":
-        print(colored("DB_Pass is check ...", 'yellow'),
-              colored('[No]', 'red'))
+        print_functions('DB_Pass', 'No', 'red')
     else:
-        print(colored("DB_Pass is check ...", 'yellow'),
-              colored('[ok]', 'green'))
+        print_functions('DB_Pass', 'ok', 'green')
     #
     if os.getenv('DB_Host') == "":
-        print(colored("DB_Host is check ...", 'yellow'),
-              colored('[No]', 'red'))
+        print_functions('DB_Host', 'No', 'red')
     else:
-        print(colored("DB_Host is check ...", 'yellow'),
-              colored('[ok]', 'green'))
+        print_functions('DB_Host', 'ok', 'green')
     #
     if os.getenv('Delay') == "":
-        print(colored("Delay is check ...", 'yellow'),
-              colored('[No]', 'red'))
+        print_functions('Delay', 'No', 'red')
     else:
-        print(colored("Delay is check ...", 'yellow'),
-              colored('[ok]', 'green'))
-    #
+        print_functions('Delay', 'ok', 'green')
+    # ====================================================
     if flag == 0:
         print(colored("[*] start application...", 'white'),
               colored("[No]", 'red'))
