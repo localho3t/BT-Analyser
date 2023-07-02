@@ -1,5 +1,5 @@
 from termcolor import colored
-from app.fileReader.logReader import LogReader
+from app.fileReader.logReader import main
 
 
 class App:
@@ -12,4 +12,4 @@ class App:
         self.start()
 
     def start(self):
-        LogReader()
+        main()
