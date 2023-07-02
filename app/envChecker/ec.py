@@ -12,7 +12,7 @@ def env_check():
             from app.envChecker.create_env import create
             print(colored(".env is check ...", 'yellow'),
                   colored('[No]', 'red'))
-            print(colored("wite...", 'yellow'), colored('[3s]', 'red'))
+            print(colored("wait...", 'yellow'), colored('[3s]', 'red'))
             print(colored(".env is complate", 'yellow'),
                   colored('[ok]', 'green'))
             File_PATH = input("Enter log File Path >> ")
@@ -26,7 +26,7 @@ def env_check():
                 print(
                     colored("file path and DB Host and User And Password is required", 'red'))
                 exit(0)
-            create(DB_Host, DB_User, DB_Pass, Delay, File_PATH)
+            create(DB_Host, DB_User, DB_Pass, int(Delay), File_PATH)
             exists_os()
         except KeyboardInterrupt:
             print(
