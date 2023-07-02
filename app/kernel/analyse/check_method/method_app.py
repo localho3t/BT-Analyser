@@ -2,7 +2,7 @@
 
 def method_analyse(methods):
     res = mc(methods)
-    print(res)
+    return res
 
 
 def mc(m):

@@ -16,6 +16,8 @@ class KernelAnalyser:
         referrer = []
         user_agent = []
         from app.kernel.analyse.check_method.method_app import method_analyse
+        from app.kernel.analyse.check_response.check_reponse_app import CheckResponseApp
+        cra = CheckResponseApp()
         for i in self.data:
             ip_address.append(i['ip_address'])
             timestamp.append(i['timestamp'])
@@ -27,4 +29,6 @@ class KernelAnalyser:
             referrer.append(i['referrer'])
             user_agent.append(i['user_agent'])
 
-        method_analyse(request)
+        method_result = method_analyse(request)
+        response_result = cra.setData(status_code)
+        # print(response_result)
