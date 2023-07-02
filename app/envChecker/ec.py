@@ -12,5 +12,4 @@ def env_check():
         print(colored(".env is check ...", 'yellow'), colored('[No]', 'red'))
         print(colored("wite...", 'yellow'), colored('[3s]', 'red'))
         print(colored(".env is complate", 'yellow'), colored('[ok]', 'green'))
-
         create()

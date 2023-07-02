@@ -61,9 +61,9 @@ def exists_os():
               colored("[No]", 'red'))
         print(colored("[!] Error Delay value ... ", 'red'))
         exit(0)
-    else:
-        print(colored("[*] start application...", 'white'),
-              colored("[Yes]", 'green'))
+    # else:
+    #     print(colored("[*] start application...", 'white'),
+    #           colored("[Yes]", 'green'))
     if cp == 2:
         from connection.checkConnection import check
         check()
