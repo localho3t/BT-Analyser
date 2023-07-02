@@ -1,3 +1,4 @@
+from app.main.App import App
 from termcolor import colored
 from dotenv import load_dotenv
 import os
@@ -66,4 +67,8 @@ def exists_os():
     #           colored("[Yes]", 'green'))
     if cp == 2:
         from connection.checkConnection import check
-        check()
+        if check():
+            App()
+        else:
+            print(colored("[!] Error 300 ", 'red'))
+            exit(0)

@@ -1,20 +1,33 @@
+from time import sleep
 import mysql.connector
 from termcolor import colored
 from connection.table.log_table import log_create
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+
+def DBNameCheck():
+    if not "DB_Name" in os.environ:
+        f = open('.env', 'a+')
+        f.write("DB_Name=\"bt_Analyser\"\n")
+        f.close()
+        load_dotenv()
 
 
 def CreateDB(data):
+    sleep(3)
     print(colored('create database ...',
                   'yellow'), colored('[wait]', 'yellow'))
     mycursor = data.cursor()
+    DBNameCheck()
     #
     try:
         mycursor = data.cursor()
+
         mycursor.execute("CREATE DATABASE bt_Analyser")
-        f = open('.env', 'a+')
-        f.write("DB_Name=\"bt_Analyser\"\n")
         print(colored('[*] Database bt_Analyser was created!',
-              'green'))
+                      'green'))
         log_create()
     except:
         try:

@@ -21,6 +21,7 @@ def check():
         print(colored('check connection ...',
               'yellow'), colored('[ok]', 'green'))
         CreateDB(mydb)
+        return True
     except:
         print(colored('check connection ...',
               'yellow'), colored('[No]', 'red'))
