@@ -6,6 +6,8 @@ from termcolor import colored
 from connection.controller.logController import logController
 from connection.controller.traficController import traficController
 from app.kernel.analyse.kernel_analyse import KernelAnalyser
+from app.banner.v1.banner import banner
+
 
 load_dotenv()
 
@@ -17,8 +19,9 @@ class Kernel:
 
     def analyze(self, data):
         os.system("clear")
+        banner()
         print(
-            colored(f"[{str(datetime.datetime.now()).split('.'[0])}]", "red"),
+            colored(f"[{str(datetime.datetime.now()).split('.')[0]}]", "red"),
             colored("app start ...", "green"),
         )
         while True:
@@ -27,7 +30,7 @@ class Kernel:
                 self.traficController.select_insert(information[1])
                 self.logController.select_insert(information[0])
                 print(
-                    colored(f"[{str(datetime.datetime.now()).split('.'[0])}]", "red"),
+                    colored(f"[{str(datetime.datetime.now()).split('.')[0]}]", "red"),
                     colored("i am still alive ...", "green"),
                 )
                 sleep(int(os.getenv("Delay")))
@@ -37,7 +40,7 @@ class Kernel:
             except ConnectionRefusedError:
                 print(
                     colored(
-                        f"[{str(datetime.datetime.now()).split('.'[0])}]", "yellow"
+                        f"[{str(datetime.datetime.now()).split('.')[0]}]", "yellow"
                     ),
                     colored("I died", "red"),
                 )
