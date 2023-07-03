@@ -18,6 +18,10 @@ python3 main.py
 
 The database used in this software is MySQL. Firstly, you need to create a user in MySQL and then provide the details such as [username, host, password] when running the software. Additionally, two other parameters are required in the configuration files which are the log directory address and the repetition rate within a time interval. After entering the information, the program automatically creates the database and its tables and starts working. If you encounter an error, edit the created .env file.
 
-enjoy ;)
+## License
+
+The BT-Analyser software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# enjoy ;)
 
 ![title image](src/body.png)
