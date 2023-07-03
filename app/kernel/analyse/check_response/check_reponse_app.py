@@ -1,8 +1,11 @@
+import json
+
+
 class CheckResponseApp:
     data = None
 
     def generate_list(self):
-        return {
+        lists = {
             100: 0,
             101: 0,
             102: 0,
@@ -68,6 +71,7 @@ class CheckResponseApp:
             510: 0,
             511: 0,
         }
+        return lists
 
     def setData(self, data):
         self.data = data
@@ -75,15 +79,19 @@ class CheckResponseApp:
         return res
 
     def check_reponses(self):
-        list = self.generate_list()
+        list_ = self.generate_list()
+
         try:
             for i in self.data:
                 c = int(i)
-                list[c] += 1
+                list_[c] += 1
         except:
             pass
-
-        for key in list(list.keys()):
-            if list[key] == 0:
-                list.pop(key)
-        return list
+        # print(list(list_.keys()))
+        # exit()
+        for key in list(list_.keys()):
+            if list_[key] == 0:
+                list_.pop(key)
+        # print(list_)
+        # exit()
+        return list_
