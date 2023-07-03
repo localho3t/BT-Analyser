@@ -19,6 +19,7 @@ def env_check():
             DB_Host = input("Enter DB HOST >> ")
             DB_User = input("Enter DB User >> ")
             DB_Pass = input("Enter DB Pass >> ")
+            DB_Name = input("Enter DB Name >> ")
             Delay = input("Enter Delay >> [d:30]")
             if Delay == "":
                 Delay = 30
@@ -26,7 +27,7 @@ def env_check():
                 print(
                     colored("file path and DB Host and User And Password is required", 'red'))
                 exit(0)
-            create(DB_Host, DB_User, DB_Pass, int(Delay), File_PATH)
+            create(DB_Host, DB_User, DB_Pass, int(Delay), File_PATH, DB_Name)
             exists_os()
         except KeyboardInterrupt:
             print(

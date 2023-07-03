@@ -20,6 +20,12 @@ def exists_os():
     else:
         print_functions('File_PATH', 'ok', 'green')
     #
+    if os.getenv('DB_Name') == "":
+        print_functions('File_PATH', 'No', 'red')
+        flag = 2
+    else:
+        print_functions('File_PATH', 'ok', 'green')
+    #
     if os.getenv('DB_User') == "":
         flag = 2
         print_functions('DB_User', 'No', 'red')
