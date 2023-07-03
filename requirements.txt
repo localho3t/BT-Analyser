@@ -1,0 +1,3 @@
+termcolor==2.3.0
+mysql-connector-python==8.0.33
+dotenv==0.0.5
