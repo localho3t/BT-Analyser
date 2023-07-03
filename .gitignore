@@ -2,3 +2,4 @@ __pycache__
 ./start/__pycache__
 file
 .env
+.vscode
