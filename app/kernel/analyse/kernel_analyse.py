@@ -27,7 +27,7 @@ class KernelAnalyser:
         for i in self.data:
             # ip_address.append(i['ip_address'])
             # timestamp.append(i['timestamp'])
-            # date.append(i['date'])
+            date.append(i['date'])
             time.append(i["time"])
             request.append(i["request"])
             status_code.append(i["status_code"])
@@ -44,4 +44,3 @@ class KernelAnalyser:
         }
         time_data = {"time": time}
         return [data, time_data]
-        # print(response_result)
