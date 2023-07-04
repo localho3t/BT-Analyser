@@ -1,10 +1,12 @@
 from connection.connections import Connection
 import json
 import datetime
-
+from app.report.trafic.traficReport import TraficReportCreator
 
 class traficController(Connection):
+    trc = TraficReportCreator()
     def select_insert(self, data):
+        self.trc.create(data)
         date = datetime.date.today()
         sql = self.querys.select_trafic_log()
         cursor = self.mydb.cursor()

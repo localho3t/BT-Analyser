@@ -16,7 +16,7 @@ def banner():
 ╱╱╱╱╱╱╱╱v1.2.0╱╱╱╱╱╱╱╱╭━╯┃[localho3t]
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯{colored('(nginx)','green')}
 """, 'red'), colored(f"""
-[*] last update :  1 Jul 2023
+[*] last update :  4 Jul 2023
 [*] ideas : Coding with security ;)
 """, 'green')
     )

@@ -10,7 +10,7 @@ def LogReader():
     sa = SpliterApp()
     kernel = Kernel()
     data_log = []
-    print(colored("[*] Running program ...", 'green'))
+    # print(colored("[*] Running program ...", 'green'))
 
     try:
         f = open(os.getenv('File_PATH'), 'r')
