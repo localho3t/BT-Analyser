@@ -1,7 +1,7 @@
 from app.report.generate.gen import ReportGenerate
 
 
-class StatusCodeReportCreator:
+class MethodReportCreator:
     def create(self, data):
         ReportGenerate(data.keys(), data.values(),
-                       "statusCode", "status_code", "counter")
+                       "method", "method", "counter")

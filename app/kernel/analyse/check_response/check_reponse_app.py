@@ -1,9 +1,9 @@
 import json
-
+from app.report.status_code.status_code import StatusCodeReportCreator
 
 class CheckResponseApp:
     data = None
-
+    scc = StatusCodeReportCreator()
     def generate_list(self):
         lists = {
             100: 0,
@@ -94,4 +94,5 @@ class CheckResponseApp:
                 list_.pop(key)
         # print(list_)
         # exit()
+        self.scc.create(list_)
         return list_

@@ -25,6 +25,12 @@ The database used in this software is MySQL. Firstly, you need to create a user 
 
 In this version, an image chart has been added to the project and it displays the hourly traffic chart.
 
+## update v1.2.1
+
+![simple chart](./src/simple_statuscode.png) ![simple chart](./src/simpleMethod.png)
+
+In this version, the status code and request method charts have been generated as images for the day.
+
 ## License
 
 The BT-Analyser software licensed under the [MIT license](https://opensource.org/licenses/MIT).

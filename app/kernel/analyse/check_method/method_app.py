@@ -1,9 +1,11 @@
-
+from app.report.method.methodGeneration import MethodReportCreator
 
 def method_analyse(methods):
     res = mc(methods)
     return res
 
+
+mrc = MethodReportCreator()
 
 def mc(m):
     get = 0
@@ -32,7 +34,7 @@ def mc(m):
             path += 1
         elif val == "DELETE":
             delete += 1
-    return {
+    list_ = {
         'get': get,
         'post': post,
         'head': head,
@@ -40,3 +42,5 @@ def mc(m):
         'path': path,
         'delete': delete,
     }
+    mrc.create(list_)
+    return list_
