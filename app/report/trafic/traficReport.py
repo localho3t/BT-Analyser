@@ -1,8 +1,5 @@
-import datetime
-import matplotlib.pyplot as plt
-
+from app.report.generate.gen import ReportGenerate
 class TraficReportCreator:
-    date = datetime.date.today()
     def create(self,data):
         time_dict = {}
         for time in data['time']:
@@ -14,9 +11,4 @@ class TraficReportCreator:
             time_dict[f"{hour}"] += 1
 
         duplicates = {k: v for k, v in time_dict.items() if v > 0}
-        plt.plot(duplicates.keys(), duplicates.values())
-        plt.xlabel('Time')
-        plt.ylabel('volumns')
-        plt.title('Trafic Report')
-        plt.savefig(f"./images/reports/traficReport/{self.date}")
-        plt.close()
+        ReportGenerate(duplicates.keys(), duplicates.values(), "trafic","Time","volumns")
